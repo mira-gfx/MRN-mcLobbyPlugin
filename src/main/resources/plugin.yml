@@ -1,0 +1,12 @@
+main: mira.lobby.Main
+name: lobby-plugin
+version: 0.11BETA
+commands:
+  serversystem:
+    usage: /<command>
+  build:
+    usage: /<command>
+  lobby:
+    usage: /<command>
+  allkick:
+    usage: /<command>

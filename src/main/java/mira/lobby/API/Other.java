@@ -1,0 +1,1 @@
+package mira.lobby.API;import org.bukkit.Bukkit;public class Other{    public static void InfoLog(String text){        Bukkit.getServer().getLogger().info(text);    }}
