@@ -25,7 +25,7 @@ public class CommandLog implements Listener {
     public static File logs_dir = new File(plugin_dir, "CommandLogs");
 
     public CommandLog(){
-CheckFolder();
+        CheckFolder();
     }
 
     @EventHandler
@@ -37,21 +37,21 @@ CheckFolder();
         String Date_str = sdf.format(date);
 
         File player_log = new File(logs_dir, p.getName()+".yml");
-                if(!player_log.exists()){
+        if(!player_log.exists()){
             try{
                 player_log.createNewFile();
             }catch (IOException exception){
                 System.out.print("aaaaaa");
                 return;
             }
-                }
-try{
-    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(player_log));
+        }
+        try{
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(player_log));
             bufferedWriter.write(Date_str + " | " + cmd + "/n");
-    bufferedWriter.close();
-}catch (IOException e1){
-                  System.out.print("aaaaaaa");
-}
+            bufferedWriter.close();
+        }catch (IOException e1){
+            System.out.print("aaaaaaa");
+        }
     }
 
     public void CheckFolder(){

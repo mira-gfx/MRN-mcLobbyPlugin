@@ -37,7 +37,7 @@ public void onEnable() {
 	new ChatManeger(this);
 	new GUI(this);
 	getLogger().info(ChatColor.BLUE + "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-	getLogger().info("       MRN-LOBBy-PluginY！起動完了！  ");
+	getLogger().info("       MRN-LOBBy-Plugin！起動完了！  ");
 	getLogger().info("          by mira_gfx     ");
 	getLogger().info( ChatColor.BLUE +"-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 }
@@ -45,7 +45,7 @@ public void onEnable() {
 @Override
 public void onDisable() {
 	getLogger().info("-----------------------");
-	getLogger().info("MRN-Lobby-PluginY");
+	getLogger().info("MRN-Lobby-Plugin");
 	getLogger().info("-----------------------");
 }
 }

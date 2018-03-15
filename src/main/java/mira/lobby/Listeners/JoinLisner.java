@@ -83,7 +83,7 @@ public class JoinLisner implements Listener {
 				}
 			}
 			//コンソールLog
-			plugin.getLogger().info("[Server-States]" + Bukkit.getServer().getOnlinePlayers() + "/" + Bukkit.getServer().getMaxPlayers());
+			plugin.getLogger().info("[Server-States]" + Bukkit.getServer().getOnlinePlayers().size() + "/" + Bukkit.getServer().getMaxPlayers());
 			plugin.getLogger().info("[UUID info]=" + p.getUniqueId());
 			plugin.getLogger().info("[GameMode info]=" + p.getGameMode());
 			plugin.getLogger().info("[OP info]=" + op);
