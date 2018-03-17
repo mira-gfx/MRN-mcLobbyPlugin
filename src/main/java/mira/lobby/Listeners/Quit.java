@@ -1,5 +1,6 @@
 package mira.lobby.Listeners;
 
+import mira.lobby.API.ScoreBord;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -24,6 +25,10 @@ public class Quit implements Listener {
         Inventory i = p.getInventory();
         e.setQuitMessage(ChatColor.DARK_GRAY + "§lQuit>>" + e.getPlayer().getName());
         i.clear();
+
+        for (Player on : Bukkit.getOnlinePlayers()) {
+            ScoreBord.ScoreBordAdd(on);
+        }
     }
 
 

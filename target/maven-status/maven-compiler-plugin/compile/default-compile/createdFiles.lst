@@ -11,6 +11,7 @@ mira/lobby/GUI/SettingGUI.class
 mira/lobby/Listeners/ChatManeger.class
 mira/lobby/Listeners/Quit.class
 mira/lobby/Commands/VandalismKickCommand.class
+mira/lobby/API/Memory.class
 mira/lobby/Commands/LobbyCommnad.class
 mira/lobby/Commands/ServerSystemCommand.class
 mira/lobby/API/LobbyGiveItem.class

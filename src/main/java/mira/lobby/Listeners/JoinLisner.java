@@ -69,6 +69,10 @@ public class JoinLisner implements Listener {
 
 
 		} else {
+			//sukoabo-dokousinn
+			for (Player on : Bukkit.getOnlinePlayers()) {
+				ScoreBord.ScoreBordAdd(on);
+			}
 
 			//LobbyTp
 			p.teleport(new Location(Bukkit.getWorld("Lobbytest"), -2.5, 77, -23));

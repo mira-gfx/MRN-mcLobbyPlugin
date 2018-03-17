@@ -1,5 +1,6 @@
 package mira.lobby.Commands;
 
+import mira.lobby.API.Memory;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -23,13 +24,10 @@ public class ServerSystemCommand implements CommandExecutor {
                 sender.sendMessage("OS-Arch=" + System.getProperty("os.arch"));
                 sender.sendMessage("UserName=" + System.getProperty("user.name"));
                 sender.sendMessage("JavaVersion=" + System.getProperty("Java.Version"));
-                sender.sendMessage("Memory(使用量)=" + Runtime.getRuntime().totalMemory());
-                sender.sendMessage("Memory(使用可能量)=" + Runtime.getRuntime().maxMemory());
-                sender.sendMessage("Memory(空いてるメモリ)=" + Runtime.getRuntime().freeMemory());
+                sender.sendMessage("Memory=" + Memory.getMemoryInfo());
                 sender.sendMessage("BukkitVersion=" + Bukkit.getVersion());
                 sender.sendMessage("MaxPlayer=" + Bukkit.getMaxPlayers());
                 sender.sendMessage("Worlds=" + Bukkit.getWorlds().toString());
-                sender.sendMessage("Plugins=" + Bukkit.getPluginManager().getPlugins().toString());
                 Bukkit.getServer().getLogger().info(sender.getName() + "がServerSystemコマンドを使用してサーバの情報を手に入れました");
                 return true;
             } else

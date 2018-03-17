@@ -2,6 +2,7 @@
 /Users/mira_gfx/lobbyplugin/MRN-mcLobbyPlugin/src/main/java/mira/lobby/API/Other.java
 /Users/mira_gfx/lobbyplugin/MRN-mcLobbyPlugin/src/main/java/mira/lobby/Listeners/ChatManeger.java
 /Users/mira_gfx/lobbyplugin/MRN-mcLobbyPlugin/src/main/java/mira/lobby/Listeners/JoinLisner.java
+/Users/mira_gfx/lobbyplugin/MRN-mcLobbyPlugin/src/main/java/mira/lobby/API/Memory.java
 /Users/mira_gfx/lobbyplugin/MRN-mcLobbyPlugin/src/main/java/mira/lobby/LobbyProtect/CommandLog.java
 /Users/mira_gfx/lobbyplugin/MRN-mcLobbyPlugin/src/main/java/mira/lobby/Commands/BuildModeCommand.java
 /Users/mira_gfx/lobbyplugin/MRN-mcLobbyPlugin/src/main/java/mira/lobby/GUI/SettingGUI.java
