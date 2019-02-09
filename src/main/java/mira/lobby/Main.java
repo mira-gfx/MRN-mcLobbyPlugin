@@ -30,7 +30,7 @@ public void onEnable() {
 	getCommand("allkick").setExecutor(new VandalismKickCommand());
 	new JoinLisner(this);
 	new LobbyProtect(this);
-	new Vanbalism(this);
+	new LobbyProtect(this);
 	new Quit(this);
 	new TNTItem(this);
 	new CommandLog(this);

@@ -1,20 +1,22 @@
 package mira.lobby.Vandalism;
 
+import mira.lobby.Commands.BuildModeCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerGameModeChangeEvent;
 import org.bukkit.plugin.Plugin;
 
 
-public class Vanbalism implements Listener{
+public class LobbyProtect implements Listener{
     Plugin plugin;
 
     //この下がコンストラクタ
-    public Vanbalism(Plugin me){
+    public LobbyProtect(Plugin me){
         this.plugin = me;
         Bukkit.getPluginManager().registerEvents(this,plugin);{
 
@@ -34,6 +36,18 @@ public class Vanbalism implements Listener{
                     on.sendMessage(ChatColor.RED + e.getPlayer().getName() + "がゲームモードをスペクテイターに変更しました");
                 }
             }
+        }
+    }
+
+    @EventHandler
+    public void Blockchange(BlockBreakEvent e){
+        Player p = e.getPlayer();
+        if(p.isOp()){
+            if(BuildModeCommand.Build.equals(true)){
+                e.setCancelled(false);
+            }
+        }else{
+            e.setCancelled(true);
         }
     }
 }

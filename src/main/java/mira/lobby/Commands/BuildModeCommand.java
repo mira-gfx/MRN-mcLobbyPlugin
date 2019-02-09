@@ -17,7 +17,7 @@ import org.bukkit.inventory.Inventory;
 
 public class BuildModeCommand implements CommandExecutor {
 
-    public static HashMap<String, Boolean> Build = new HashMap<>();
+    public static Boolean Build;
     public List<Player> getOnlineOps(){
 	    List<Player> players = new ArrayList<>(Bukkit.getOnlinePlayers());
 	    List<Player> onlineOPs = new ArrayList<>();
@@ -40,7 +40,7 @@ public class BuildModeCommand implements CommandExecutor {
                 	    //プレイヤー？
                 	    if (sender.isOp() == true) {
                             Player p = (Player) sender;
-                            Build.put(p.getName(), true);
+                            Build.equals(true);
                             //OP処理
                             Bukkit.getOnlinePlayers()
                                     .stream()
@@ -66,7 +66,7 @@ public class BuildModeCommand implements CommandExecutor {
             }else  if(args[0].equalsIgnoreCase("off")) {
                     //因数がOffだったら
             	Player p = (Player) sender;
-            	Build.put(p.getName(), false);
+            	Build.equals(false);
             	Inventory inv = p.getInventory();
             	inv.clear();
             	sender.sendMessage("BuildMoodをOffにしました。");

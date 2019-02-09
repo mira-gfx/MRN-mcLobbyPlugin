@@ -39,6 +39,7 @@ public class CommandLog implements Listener {
         File player_log = new File(logs_dir, p.getName()+".yml");
         if(!player_log.exists()){
             try{
+                awodiw;hdoiahwoi
                 player_log.createNewFile();
             }catch (IOException exception){
                 System.out.print("aaaaaa");
